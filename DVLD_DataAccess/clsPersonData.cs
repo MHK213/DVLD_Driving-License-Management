@@ -280,13 +280,13 @@ namespace DVLD_DataAccess
 
             string query = @"SELECT People.PersonID, People.NationalNo, People.FirstName, People.SecondName, People.ThirdName, People.LastName, People.Gendor, 
                              CASE People.Gendor
-                                WHEN People.Gendor = 0 THEN 'Male'
+                                WHEN 0 THEN 'Male'
                                 ELSE 'Female'
                             END AS GendorCaption,
                             People.DateOfBirth, People.NationalityCountryID, Countries.CountryName, People.Phone, People.Email, People.ImagePath
-                            FROM People P
-                            INNER JOIN Countries C
-                            ON P.NationalityCountryID = C.CountryID
+                            FROM People
+                            INNER JOIN Countries
+                            ON People.NationalityCountryID = Countries.CountryID
                             ORDER BY People.FirstName;";
 
             SqlCommand command = new SqlCommand(query, connection);
