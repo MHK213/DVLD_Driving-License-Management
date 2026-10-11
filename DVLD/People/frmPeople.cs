@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using DVLD_Business;
+using DVLD.People;
 
 namespace DVLD
 {
@@ -211,8 +212,8 @@ namespace DVLD
 
         private void _AddPerson()
         {
-            //frmAddEditPerson addUpdatePerson = new frmAddEditPerson(-1);
-            //addUpdatePerson.ShowDialog();
+            frmAddEditPerson addUpdatePerson = new frmAddEditPerson();
+            addUpdatePerson.ShowDialog();
         }
 
         private void btnAddPerson_Click(object sender, EventArgs e)
