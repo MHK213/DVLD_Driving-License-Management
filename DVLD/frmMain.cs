@@ -12,6 +12,15 @@ namespace DVLD
 
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form child in this.MdiChildren)
+            {
+                if (child is frmPeople)
+                {
+                    child.Activate();
+                    return;
+                }
+            }
+
             frmPeople people = new frmPeople();
 
             people.MdiParent = this;
