@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalClass\clsUtil.cs" />
     <Compile Include="GlobalClass\clsValidation.cs" />
     <Compile Include="People\frmAddEditPerson.cs">
       <SubType>Form</SubType>

@@ -3,10 +3,6 @@ using System;
 using DVLD.GlobalClass;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -190,6 +186,41 @@ namespace DVLD.People
 
         }
 
+        private bool _HandlePersonImage()
+        {
+
+            if (_person.ImagePath != pbPersonImage.ImageLocation)
+            {
+                if (_person.ImagePath != "")
+                {
+
+                    try
+                    {
+                        File.Delete(_person.ImagePath);
+                    }
+                    catch (IOException){}
+                }
+
+                if (pbPersonImage.ImageLocation != null)
+                {
+                    string SourceImageFile = pbPersonImage.ImageLocation.ToString();
+
+                    if (clsUtil.CopyImageToProjectImagesFolder(ref SourceImageFile))
+                    {
+                        pbPersonImage.ImageLocation = SourceImageFile;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+
+            }
+            return true;
+        }
+
         private void frmAddEditPerson_Load(object sender, EventArgs e)
         {
             _ResetDefaultValues();
@@ -206,7 +237,7 @@ namespace DVLD.People
                 return;
             }
 
-
+            if (!_HandlePersonImage()) return;
 
             int NationalityCountryID = clsCountry.Find(cbCountry.Text).CountryID;
 
