@@ -99,6 +99,8 @@ namespace DVLD.People
 
         private void _FillCountriesInComboBox()
         {
+            cbCountry.Items.Clear();
+
             DataTable dtCountries = clsCountry.GetAllCountries();
 
             foreach (DataRow row in dtCountries.Rows)
