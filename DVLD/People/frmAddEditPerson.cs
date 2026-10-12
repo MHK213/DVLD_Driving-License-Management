@@ -88,8 +88,12 @@ namespace DVLD.People
 
         private void _rbChecked()
         {
-            if (rbMale.Checked) pbPersonImage.Image = global::DVLD.Properties.Resources.Male_512;
-            else pbPersonImage.Image = global::DVLD.Properties.Resources.Female_512;
+            if (pbPersonImage.ImageLocation != null)
+                return;
+
+            pbPersonImage.Image = rbMale.Checked
+                ? global::DVLD.Properties.Resources.Male_512
+                : global::DVLD.Properties.Resources.Female_512;
         }
 
         private void rbMale_CheckedChanged(object sender, EventArgs e)
