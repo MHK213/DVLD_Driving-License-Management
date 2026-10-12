@@ -55,17 +55,21 @@ namespace DVLD.People
         {
             string email = txtEmail.Text.Trim();
 
-            if (email == "") return;
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                errorProvider1.SetError(txtEmail, "");
+                return;
+            }
 
             if (!clsValidation.ValidateEmail(email))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtEmail, "Invalid Email Format!");
+                errorProvider1.SetError(txtEmail,
+                    "Invalid Email Format!");
+                return;
             }
-            else
-            {
-                errorProvider1.SetError(txtEmail, "");
-            }
+
+            errorProvider1.SetError(txtEmail, "");
         }
 
         private void txtNationalNo_Validating(object sender, CancelEventArgs e)
