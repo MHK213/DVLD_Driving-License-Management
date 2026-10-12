@@ -179,12 +179,12 @@ namespace DVLD
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //int personId = Convert.ToInt32(dgvPeople.CurrentRow.Cells["Person ID"].Value);
+            int personId = Convert.ToInt32(dgvPeople.CurrentRow.Cells["PersonID"].Value);
 
-            //frmAddEditPerson addUpdatePerson = new frmAddEditPerson(personId);
-            //addUpdatePerson.ShowDialog();
+            frmAddEditPerson addUpdatePerson = new frmAddEditPerson(personId);
+            addUpdatePerson.ShowDialog();
 
-            //_RefreshPeopleList();
+            _RefreshPeopleList();
         }
 
         private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
