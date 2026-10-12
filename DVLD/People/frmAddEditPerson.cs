@@ -74,20 +74,26 @@ namespace DVLD.People
 
         private void txtNationalNo_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNationalNo.Text.Trim()))
+            string nationalNo = txtNationalNo.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nationalNo))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtNationalNo, "This field is required!");
+                errorProvider1.SetError(txtNationalNo,
+                    "This field is required!");
+                return;
             }
-            else
+
+            if (clsPerson.IsPersonExist(nationalNo) &&
+                nationalNo != _person.NationalNo)
             {
-                errorProvider1.SetError(txtNationalNo, "");
+                e.Cancel = true;
+                errorProvider1.SetError(txtNationalNo,
+                    "National Number is used for another person!");
+                return;
             }
 
-            bool IsNationalNoExist = clsPerson.IsPersonExist(txtNationalNo.Text);
-
-            if (txtNationalNo.Text.Trim() != _person.NationalNo && IsNationalNoExist) errorProvider1.SetError(txtNationalNo, "National Number is used for another person!");
-            else errorProvider1.SetError(txtNationalNo, "");
+            errorProvider1.SetError(txtNationalNo, "");
         }
 
         private void _rbChecked()
