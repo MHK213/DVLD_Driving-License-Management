@@ -168,13 +168,13 @@ namespace DVLD
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //int personId = Convert.ToInt32(dgvPeople.CurrentRow.Cells["Person ID"].Value);
+            int personId = Convert.ToInt32(dgvPeople.CurrentRow.Cells["PersonID"].Value);
 
-            //frmPersonDetails personDetails = new frmPersonDetails(personId);
+            frmShowPersonInfo personDetails = new frmShowPersonInfo(personId);
 
-            //personDetails.ShowDialog();
+            personDetails.ShowDialog();
 
-            //_RefreshPeopleList();
+            _RefreshPeopleList();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
