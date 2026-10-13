@@ -37,6 +37,7 @@ namespace DVLD.People.Controls
         {
             llEditPersonInfo.Enabled = false;
 
+            _Person = null;
             _PersonID = -1;
 
             lblPersonID.Text = "[????]";
@@ -48,6 +49,9 @@ namespace DVLD.People.Controls
             lblDateOfBirth.Text = "[????]";
             lblPhone.Text = "[????]";
             lblCountry.Text = "[????]";
+
+            pbPersonImage.ImageLocation = null;
+
             pbPersonImage.Image = global::DVLD.Properties.Resources.Male_512;
             pbGendor.Image = global::DVLD.Properties.Resources.Man_32;
 
@@ -56,13 +60,19 @@ namespace DVLD.People.Controls
         private void _LoadPersonImage()
         {
 
+            pbPersonImage.ImageLocation = null;
+
             string ImagePath = _Person.ImagePath;
 
-            if (ImagePath != "")
-                if (File.Exists(ImagePath))
-                    pbPersonImage.ImageLocation = ImagePath;
-                else
-                    MessageBox.Show("Could not find this image: = " + ImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            pbPersonImage.Image = _Person.Gender == 1 ? global::DVLD.Properties.Resources.Female_512 : global::DVLD.Properties.Resources.Male_512;
+
+            if (string.IsNullOrWhiteSpace(ImagePath))
+                return;
+
+            if (File.Exists(ImagePath))
+                pbPersonImage.ImageLocation = ImagePath;
+            else
+                MessageBox.Show("Could not find this image: = " + ImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
