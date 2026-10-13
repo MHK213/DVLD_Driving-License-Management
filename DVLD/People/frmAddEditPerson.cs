@@ -145,7 +145,7 @@ namespace DVLD.People
             dtpDateOfBirth.Value = dtpDateOfBirth.MaxDate;
             dtpDateOfBirth.MinDate = DateTime.Now.AddYears(-100);
 
-            cbCountry.SelectedIndex = cbCountry.FindString("Algeria");
+            cbCountry.SelectedIndex = cbCountry.FindStringExact("Algeria");
 
             txtFirstName.Text = "";
             txtSecondName.Text = "";
