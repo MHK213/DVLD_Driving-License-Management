@@ -88,32 +88,15 @@ namespace DVLD.People.Controls
             lblNationalNo.Text = _Person.NationalNo;
             lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString();
 
-            if (_Person.Gender == 1)
-            {
-                lblGendor.Text = "Female";
-                pbPersonImage.Image = global::DVLD.Properties.Resources.Female_512;
-            }
-            else
-            {
-                lblGendor.Text = "Male";
-                pbPersonImage.Image = global::DVLD.Properties.Resources.Male_512;
-            }
-
             lblPhone.Text = _Person.Phone;
             lblEmail.Text = _Person.Email;
             lblCountry.Text = _Person.CountryInfo.CountryName;
             lblAddress.Text = _Person.Address;
 
+            lblGendor.Text = (_Person.Gender == 1) ? "Female" : "Male";
+
             _LoadPersonImage();
 
-        }
-
-        private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmAddEditPerson frm = new frmAddEditPerson(_PersonID);
-            frm.ShowDialog();
-
-            LoadPersonInfo(_PersonID);
         }
 
         public void LoadPersonInfo(int personID)
@@ -144,6 +127,14 @@ namespace DVLD.People.Controls
             }
 
             _FillPersonInfo();
+        }
+
+        private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAddEditPerson frm = new frmAddEditPerson(_PersonID);
+            frm.ShowDialog();
+
+            LoadPersonInfo(_PersonID);
         }
     }
 }
