@@ -193,7 +193,7 @@ namespace DVLD.People
 
             txtPhone.Text = _person.Phone;
             txtEmail.Text = _person.Email;
-            cbCountry.SelectedIndex = cbCountry.FindString(_person.CountryInfo.CountryName);
+            cbCountry.SelectedIndex = cbCountry.FindStringExact(_person.CountryInfo.CountryName);
             txtAddress.Text = _person.Address;
 
             if (_person.ImagePath != null) pbPersonImage.ImageLocation = _person.ImagePath;
