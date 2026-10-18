@@ -235,7 +235,13 @@ namespace DVLD
 
         private void dgvPeople_DoubleClick(object sender, EventArgs e)
         {
+            int personId = Convert.ToInt32(dgvPeople.CurrentRow.Cells["PersonID"].Value);
 
+            frmShowPersonInfo personDetails = new frmShowPersonInfo(personId);
+
+            personDetails.ShowDialog();
+
+            _RefreshPeopleList();
         }
 
         private void tbFilterBy_KeyPress(object sender, KeyPressEventArgs e)
