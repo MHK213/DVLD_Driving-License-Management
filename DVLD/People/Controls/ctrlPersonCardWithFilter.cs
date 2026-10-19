@@ -15,21 +15,21 @@ namespace DVLD.People.Controls
     {
         public event Action<int> OnPersonSelected;
 
-        protected virtual void PersonSlected(int personID)
+        protected virtual void PersonSelected(int personID)
         {
             Action<int> handler = OnPersonSelected;
 
             if(handler != null) handler(personID);
         }
 
-        private bool _ShowAddPereson = true;
+        private bool _ShowAddPerson = true;
         public bool ShowAddPerson
         {
-            get { return _ShowAddPereson; }
+            get { return _ShowAddPerson; }
             set
             {
-                _ShowAddPereson = value;
-                btnAddNewPerson.Visible = _ShowAddPereson;
+                _ShowAddPerson = value;
+                btnAddNewPerson.Visible = _ShowAddPerson;
             }
         }
 
