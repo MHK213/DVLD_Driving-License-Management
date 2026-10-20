@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DVLD_Business
 {
-    internal class clsUser
+    public class clsUser
     {
         public enum enMode { AddNew = 0, Update = 1 }
         public enMode mode = enMode.AddNew;
