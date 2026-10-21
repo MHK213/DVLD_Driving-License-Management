@@ -33,7 +33,7 @@ namespace DVLD.People.Controls
             InitializeComponent();
         }
 
-        private void _ResetDefaultValues()
+        public void ResetDefaultValues()
         {
             llEditPersonInfo.Enabled = false;
 
@@ -105,7 +105,7 @@ namespace DVLD.People.Controls
 
             if (_Person == null)
             {
-                _ResetDefaultValues();
+                ResetDefaultValues();
                 MessageBox.Show($"No Person with Person Id {personID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
@@ -120,7 +120,7 @@ namespace DVLD.People.Controls
 
             if (_Person == null)
             {
-                _ResetDefaultValues();
+                ResetDefaultValues();
                 MessageBox.Show($"No Person with NationalNo. {nationalNo}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
