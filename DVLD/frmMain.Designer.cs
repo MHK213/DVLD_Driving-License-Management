@@ -296,6 +296,7 @@
             this.employeesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
             this.employeesToolStripMenuItem.Size = new System.Drawing.Size(107, 44);
             this.employeesToolStripMenuItem.Text = "Users";
+            this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
