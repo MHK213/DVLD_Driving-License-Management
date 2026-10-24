@@ -45,7 +45,7 @@ namespace DVLD.User
             this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(720, 416);
+            this.btnClose.Location = new System.Drawing.Point(721, 420);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(8, 0, 5, 0);
@@ -63,7 +63,7 @@ namespace DVLD.User
             this.ctrlUserCard1.Location = new System.Drawing.Point(8, 8);
             this.ctrlUserCard1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(839, 399);
+            this.ctrlUserCard1.Size = new System.Drawing.Size(839, 404);
             this.ctrlUserCard1.TabIndex = 0;
             // 
             // frmUserInfo
@@ -73,7 +73,7 @@ namespace DVLD.User
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(859, 462);
+            this.ClientSize = new System.Drawing.Size(855, 466);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlUserCard1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
