@@ -126,11 +126,10 @@
             // ctrlPersonCard1
             // 
             this.ctrlPersonCard1.BackColor = System.Drawing.Color.White;
-            this.ctrlPersonCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(4, 8);
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(2, 8);
             this.ctrlPersonCard1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(839, 300);
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(835, 299);
             this.ctrlPersonCard1.TabIndex = 2;
             // 
             // ctrlUserCard

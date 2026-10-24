@@ -88,14 +88,13 @@
             // 
             this.ctrlPersonCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ctrlPersonCardWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlPersonCardWithFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctrlPersonCardWithFilter1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(11, 11);
+            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(8, 8);
             this.ctrlPersonCardWithFilter1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
             this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
             this.ctrlPersonCardWithFilter1.ShowFilter = true;
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(837, 399);
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(839, 399);
             this.ctrlPersonCardWithFilter1.TabIndex = 121;
             // 
             // btnPersonInfoNext
@@ -108,7 +107,7 @@
             this.btnPersonInfoNext.ForeColor = System.Drawing.Color.White;
             this.btnPersonInfoNext.Image = global::DVLD.Properties.Resources.Next_32;
             this.btnPersonInfoNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPersonInfoNext.Location = new System.Drawing.Point(711, 418);
+            this.btnPersonInfoNext.Location = new System.Drawing.Point(719, 411);
             this.btnPersonInfoNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPersonInfoNext.Name = "btnPersonInfoNext";
             this.btnPersonInfoNext.Size = new System.Drawing.Size(126, 40);
