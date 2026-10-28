@@ -3,9 +3,9 @@ using System.Data.SqlClient;
 
 namespace DVLD_DataAccess
 {
-    internal class clsApplicationTypesData
+    public class clsApplicationTypesData
     {
-        public static bool GetApplicationTypesInfoByID(int applicationTypeID, ref string applicationTypeTitle, ref double applicationFees)
+        public static bool GetApplicationTypesInfoByID(int applicationTypeID, ref string applicationTypeTitle, ref decimal applicationFees)
         {
             bool isFound = false;
 
@@ -27,7 +27,7 @@ namespace DVLD_DataAccess
                     isFound = true;
 
                     applicationTypeTitle = (string)reader["ApplicationTypeTitle"];
-                    applicationFees = (double)reader["ApplicationFees"];
+                    applicationFees = (decimal)reader["ApplicationFees"];
 
                 }
                 else
@@ -49,7 +49,7 @@ namespace DVLD_DataAccess
             return isFound;
         }
 
-        public static bool UpdateApplicationType(int applicationTypeID, string applicationTypeTitle, double applicationFees)
+        public static bool UpdateApplicationType(int applicationTypeID, string applicationTypeTitle, decimal applicationFees)
         {
             int rowsAffected = 0;
 
