@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\Applications Types\frmApplicationsTypesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Applications Types\frmApplicationsTypesList.Designer.cs">
+      <DependentUpon>frmApplicationsTypesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalClass\clsGlobal.cs" />
     <Compile Include="GlobalClass\clsUtil.cs" />
     <Compile Include="GlobalClass\clsValidation.cs" />
@@ -123,6 +129,9 @@
     <Compile Include="User\frmUserInfo.Designer.cs">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Applications\Applications Types\frmApplicationsTypesList.resx">
+      <DependentUpon>frmApplicationsTypesList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +358,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\closeBlack32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application Types 512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
