@@ -26,13 +26,8 @@ namespace DVLD.Applications.Applications_Types
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 =
-                new System.Windows.Forms.DataGridViewCellStyle();
-
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 =
-                new System.Windows.Forms.DataGridViewCellStyle();
-
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,139 +38,75 @@ namespace DVLD.Applications.Applications_Types
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnClose = new System.Windows.Forms.Button();
             this.pbApplicationTypesmage = new System.Windows.Forms.PictureBox();
-
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplicationTypes)).BeginInit();
             this.cmsApplicationTypes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbApplicationTypesmage)).BeginInit();
             this.SuspendLayout();
-
             // 
             // lblTitle
             // 
-            this.lblTitle.Font = new System.Drawing.Font(
-                "Microsoft Sans Serif", 24F,
-                System.Drawing.FontStyle.Bold,
-                System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(192, 0, 0);
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblTitle.Location = new System.Drawing.Point(25, 155);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(850, 45);
             this.lblTitle.TabIndex = 111;
             this.lblTitle.Text = "Manage Application Types";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // lblRecordsCount
             // 
             this.lblRecordsCount.AutoSize = true;
-            this.lblRecordsCount.Font = new System.Drawing.Font(
-                "Microsoft Sans Serif", 11F,
-                System.Drawing.FontStyle.Bold,
-                System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-            this.lblRecordsCount.ForeColor = System.Drawing.Color.FromArgb(192, 0, 0);
+            this.lblRecordsCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordsCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblRecordsCount.Location = new System.Drawing.Point(125, 535);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(38, 26);
             this.lblRecordsCount.TabIndex = 109;
             this.lblRecordsCount.Text = "??";
-
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font(
-                "Microsoft Sans Serif", 11F,
-                System.Drawing.FontStyle.Bold,
-                System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 535);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 26);
             this.label2.TabIndex = 108;
             this.label2.Text = "# Records:";
-
             // 
             // dgvApplicationTypes
             // 
             this.dgvApplicationTypes.AllowUserToAddRows = false;
             this.dgvApplicationTypes.AllowUserToDeleteRows = false;
             this.dgvApplicationTypes.AllowUserToResizeRows = false;
-
-            this.dgvApplicationTypes.AutoSizeColumnsMode =
-                System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-
+            this.dgvApplicationTypes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvApplicationTypes.BackgroundColor = System.Drawing.Color.White;
             this.dgvApplicationTypes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-
-            this.dgvApplicationTypes.CellBorderStyle =
-                System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-
-            this.dgvApplicationTypes.ColumnHeadersBorderStyle =
-                System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-
-            dataGridViewCellStyle1.Alignment =
-                System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-
-            dataGridViewCellStyle1.BackColor =
-                System.Drawing.Color.FromArgb(240, 240, 240);
-
-            dataGridViewCellStyle1.Font = new System.Drawing.Font(
-                "Microsoft Sans Serif", 12F,
-                System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
+            this.dgvApplicationTypes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvApplicationTypes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-
-            dataGridViewCellStyle1.SelectionBackColor =
-                System.Drawing.Color.FromArgb(240, 240, 240);
-
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-
-            dataGridViewCellStyle1.WrapMode =
-                System.Windows.Forms.DataGridViewTriState.True;
-
-            this.dgvApplicationTypes.ColumnHeadersDefaultCellStyle =
-                dataGridViewCellStyle1;
-
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApplicationTypes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvApplicationTypes.ColumnHeadersHeight = 40;
-
-            this.dgvApplicationTypes.ColumnHeadersHeightSizeMode =
-                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-
+            this.dgvApplicationTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvApplicationTypes.ContextMenuStrip = this.cmsApplicationTypes;
-
-            dataGridViewCellStyle2.Alignment =
-                System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-
-            dataGridViewCellStyle2.Font = new System.Drawing.Font(
-                "Microsoft Sans Serif", 12F,
-                System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-
-            dataGridViewCellStyle2.SelectionBackColor =
-                System.Drawing.Color.FromArgb(220, 235, 250);
-
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-
-            dataGridViewCellStyle2.WrapMode =
-                System.Windows.Forms.DataGridViewTriState.False;
-
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvApplicationTypes.DefaultCellStyle = dataGridViewCellStyle2;
-
-            this.dgvApplicationTypes.EditMode =
-                System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-
+            this.dgvApplicationTypes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvApplicationTypes.EnableHeadersVisualStyles = false;
-
-            this.dgvApplicationTypes.GridColor =
-                System.Drawing.Color.FromArgb(230, 230, 230);
-
+            this.dgvApplicationTypes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.dgvApplicationTypes.Location = new System.Drawing.Point(25, 220);
             this.dgvApplicationTypes.MultiSelect = false;
             this.dgvApplicationTypes.Name = "dgvApplicationTypes";
@@ -183,149 +114,95 @@ namespace DVLD.Applications.Applications_Types
             this.dgvApplicationTypes.RowHeadersVisible = false;
             this.dgvApplicationTypes.RowHeadersWidth = 62;
             this.dgvApplicationTypes.RowTemplate.Height = 35;
-
-            this.dgvApplicationTypes.SelectionMode =
-                System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-
+            this.dgvApplicationTypes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvApplicationTypes.Size = new System.Drawing.Size(850, 290);
             this.dgvApplicationTypes.TabIndex = 104;
             this.dgvApplicationTypes.TabStop = false;
-
             // 
             // cmsApplicationTypes
             // 
-            this.cmsApplicationTypes.ImageScalingSize =
-                new System.Drawing.Size(24, 24);
-
-            this.cmsApplicationTypes.Items.AddRange(
-                new System.Windows.Forms.ToolStripItem[] {
-                    this.toolStripSeparator2,
-                    this.editToolStripMenuItem,
-                    this.toolStripSeparator1
-                });
-
+            this.cmsApplicationTypes.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.cmsApplicationTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator2,
+            this.editToolStripMenuItem,
+            this.toolStripSeparator1});
             this.cmsApplicationTypes.Name = "cmsApplicationTypes";
-            this.cmsApplicationTypes.Size = new System.Drawing.Size(268, 89);
-
+            this.cmsApplicationTypes.Size = new System.Drawing.Size(268, 56);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(264, 6);
-
             // 
             // editToolStripMenuItem
             // 
-            this.editToolStripMenuItem.Image =
-                global::DVLD.Properties.Resources.edit_32;
-
-            this.editToolStripMenuItem.ImageScaling =
-                System.Windows.Forms.ToolStripItemImageScaling.None;
-
+            this.editToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit_32;
+            this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(267, 40);
             this.editToolStripMenuItem.Text = "&Edit Application Type";
-            this.editToolStripMenuItem.Click +=
-                new System.EventHandler(this.editToolStripMenuItem_Click);
-
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(264, 6);
-
             // 
             // btnClose
             // 
             this.btnClose.AutoEllipsis = true;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-
-            this.btnClose.FlatAppearance.BorderColor =
-                System.Drawing.Color.FromArgb(180, 180, 180);
-
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-
             this.btnClose.Image = global::DVLD.Properties.Resources.Close_32;
-
-            this.btnClose.ImageAlign =
-                System.Drawing.ContentAlignment.MiddleLeft;
-
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(740, 525);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(135, 38);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click +=
-                new System.EventHandler(this.btnClose_Click);
-
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pbApplicationTypesmage
             // 
-            this.pbApplicationTypesmage.BackgroundImageLayout =
-                System.Windows.Forms.ImageLayout.Zoom;
-
-            this.pbApplicationTypesmage.Image =
-                global::DVLD.Properties.Resources.Application_Types_512;
-
+            this.pbApplicationTypesmage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbApplicationTypesmage.Image = global::DVLD.Properties.Resources.Application_Types_512;
             this.pbApplicationTypesmage.InitialImage = null;
             this.pbApplicationTypesmage.Location = new System.Drawing.Point(340, 5);
             this.pbApplicationTypesmage.Name = "pbApplicationTypesmage";
             this.pbApplicationTypesmage.Size = new System.Drawing.Size(220, 145);
-
-            this.pbApplicationTypesmage.SizeMode =
-                System.Windows.Forms.PictureBoxSizeMode.Zoom;
-
+            this.pbApplicationTypesmage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbApplicationTypesmage.TabIndex = 110;
             this.pbApplicationTypesmage.TabStop = false;
-
             // 
             // frmApplicationsTypesList
             // 
             this.AcceptButton = this.btnClose;
-
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.BackColor = System.Drawing.Color.White;
-
             this.CancelButton = this.btnClose;
-
             this.ClientSize = new System.Drawing.Size(900, 590);
-
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbApplicationTypesmage);
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvApplicationTypes);
-
-            this.Font = new System.Drawing.Font(
-                "Microsoft Sans Serif", 12F,
-                System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-            this.FormBorderStyle =
-                System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-
             this.Name = "frmApplicationsTypesList";
-
-            this.StartPosition =
-                System.Windows.Forms.FormStartPosition.CenterParent;
-
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Manage Application Types";
-
-            this.Load +=
-                new System.EventHandler(this.frmApplicationsTypesList_Load);
-
+            this.Load += new System.EventHandler(this.frmApplicationsTypesList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplicationTypes)).EndInit();
             this.cmsApplicationTypes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbApplicationTypesmage)).EndInit();
-
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
