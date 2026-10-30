@@ -3,7 +3,7 @@ using System.Data;
 
 namespace DVLD_Business
 {
-    internal class clsApplicationType
+    public class clsApplicationType
     {
         public int ApplicationTypeID { get; set; }
         public string ApplicationTypeTitle { get; set; }
