@@ -1,4 +1,5 @@
-﻿using DVLD.GlobalClass;
+﻿using DVLD.Applications.Applications_Types;
+using DVLD.GlobalClass;
 using DVLD.Login;
 using DVLD.User;
 using System;
@@ -90,6 +91,23 @@ namespace DVLD
 
             users.MdiParent = this;
             users.Show();
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form child in this.MdiChildren)
+            {
+                if (child is Applications.Applications_Types.frmApplicationsTypesList)
+                {
+                    child.Activate();
+                    return;
+                }
+            }
+
+            frmApplicationsTypesList frm = new frmApplicationsTypesList();
+            frm.MdiParent = this;
+
+            frm.Show();
         }
     }
 }
