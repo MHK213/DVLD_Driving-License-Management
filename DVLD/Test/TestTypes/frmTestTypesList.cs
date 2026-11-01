@@ -1,0 +1,61 @@
+﻿using DVLD_Business;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace DVLD.Test.TestTypes
+{
+    public partial class frmTestTypesList : Form
+    {
+        private DataTable dtAllTestsType;
+
+        public frmTestTypesList()
+        {
+            InitializeComponent();
+        }
+
+        private void _RefreshTotalRecords()
+        {
+            lblRecordsCount.Text = dgvTestTypes.Rows.Count.ToString();
+        }
+
+        private void frmTestTypesList_Load(object sender, EventArgs e)
+        {
+            dtAllTestsType = clsTestType.GetAllTestTypesList();
+            dgvTestTypes.DataSource = dtAllTestsType;
+
+            _RefreshTotalRecords();
+
+            if (dgvTestTypes.Rows.Count > 0)
+            {
+                dgvTestTypes.Columns["TestTypeID"].HeaderText = "ID";
+                dgvTestTypes.Columns["TestTypeID"].Width = 120;
+
+                dgvTestTypes.Columns["TestTypeTitle"].HeaderText = "Title";
+                dgvTestTypes.Columns["TestTypeTitle"].Width = 200;
+
+                dgvTestTypes.Columns["TestTypeDescription"].HeaderText = "Description";
+                dgvTestTypes.Columns["TestTypeDescription"].Width = 400;
+
+                dgvTestTypes.Columns["TestTypeFees"].HeaderText = "Fees";
+                dgvTestTypes.Columns["TestTypeFees"].Width = 110;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
