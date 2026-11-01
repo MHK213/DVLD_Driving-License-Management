@@ -1,13 +1,7 @@
 ﻿using DVLD.GlobalClass;
 using DVLD_Business;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DVLD.Applications.Applications_Types
@@ -80,7 +74,7 @@ namespace DVLD.Applications.Applications_Types
                 errorProvider1.SetError(txtFees, string.Empty);
             }
 
-            if(!clsValidation.IsNumber(feesText))
+            if(!clsValidation.ValidateDecimal(feesText))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtFees, "Fees must be a valid number.");
