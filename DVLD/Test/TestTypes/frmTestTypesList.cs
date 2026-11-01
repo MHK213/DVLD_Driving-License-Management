@@ -1,12 +1,6 @@
 ﻿using DVLD_Business;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DVLD.Test.TestTypes
@@ -38,7 +32,7 @@ namespace DVLD.Test.TestTypes
                 dgvTestTypes.Columns["TestTypeID"].Width = 120;
 
                 dgvTestTypes.Columns["TestTypeTitle"].HeaderText = "Title";
-                dgvTestTypes.Columns["TestTypeTitle"].Width = 200;
+                dgvTestTypes.Columns["TestTypeTitle"].Width = 180;
 
                 dgvTestTypes.Columns["TestTypeDescription"].HeaderText = "Description";
                 dgvTestTypes.Columns["TestTypeDescription"].Width = 400;

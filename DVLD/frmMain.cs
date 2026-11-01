@@ -1,6 +1,7 @@
 ﻿using DVLD.Applications.Applications_Types;
 using DVLD.GlobalClass;
 using DVLD.Login;
+using DVLD.Test.TestTypes;
 using DVLD.User;
 using System;
 using System.Windows.Forms;
@@ -105,6 +106,23 @@ namespace DVLD
             }
 
             frmApplicationsTypesList frm = new frmApplicationsTypesList();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form child in this.MdiChildren)
+            {
+                if (child is Test.TestTypes.frmTestTypesList)
+                {
+                    child.Activate();
+                    return;
+                }
+            }
+
+            frmTestTypesList frm = new frmTestTypesList();
             frm.MdiParent = this;
 
             frm.Show();

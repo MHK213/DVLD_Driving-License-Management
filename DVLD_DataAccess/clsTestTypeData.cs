@@ -91,7 +91,7 @@ namespace DVLD_DataAccess
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"SELECT * FROM TestTypes
-                            ORDER BY TestTypeTitle;";
+                            ORDER BY TestTypeID;";
 
             SqlCommand command = new SqlCommand(query, connection);
 
