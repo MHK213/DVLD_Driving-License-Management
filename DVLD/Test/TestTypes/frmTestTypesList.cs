@@ -7,7 +7,7 @@ namespace DVLD.Test.TestTypes
 {
     public partial class frmTestTypesList : Form
     {
-        private DataTable dtAllTestsType;
+        private DataTable dtAllTestTypes;
 
         public frmTestTypesList()
         {
@@ -21,8 +21,8 @@ namespace DVLD.Test.TestTypes
 
         private void frmTestTypesList_Load(object sender, EventArgs e)
         {
-            dtAllTestsType = clsTestType.GetAllTestTypesList();
-            dgvTestTypes.DataSource = dtAllTestsType;
+            dtAllTestTypes = clsTestType.GetAllTestTypesList();
+            dgvTestTypes.DataSource = dtAllTestTypes;
 
             _RefreshTotalRecords();
 
