@@ -49,7 +49,10 @@ namespace DVLD.Test.TestTypes
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmEditTestType frmEdit = new frmEditTestType((clsTestType.enTestType)dgvTestTypes.SelectedRows[0].Cells["TestTypeID"].Value);
 
+            frmEdit.ShowDialog();
+            frmTestTypesList_Load(null, null);
         }
     }
 }
