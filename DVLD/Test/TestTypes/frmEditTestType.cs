@@ -68,6 +68,8 @@ namespace DVLD.Test.TestTypes
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtFees, "Fees is required.");
+
+                return;
             }
             else
             {
@@ -93,13 +95,14 @@ namespace DVLD.Test.TestTypes
                 return;
             }
             
-            _TestType.TestTypeTitle = txtTitle.Text;
-            _TestType.TestTypeDescription = txtDescription.Text;
+            _TestType.TestTypeTitle = txtTitle.Text.Trim();
+            _TestType.TestTypeDescription = txtDescription.Text.Trim();
             _TestType.TestTypeFees = decimal.Parse(txtFees.Text);
 
             if (_TestType.UpdateTestType())
             {
                 MessageBox.Show("Test Type saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
