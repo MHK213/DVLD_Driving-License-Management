@@ -4,10 +4,10 @@ using System.Data.SqlClient;
 
 namespace DVLD_DataAccess
 {
-    internal class clsApplicationsData
+    public class clsApplicationsData
     {
-        public static bool GetApplicationInfoByApplicationID(int applicationID, ref int applicantPersonID, ref DateTime applicationDate, ref int applicationTypeID, ref byte applicationStatus,
-            ref DateTime lastStatusDate, ref decimal paidFees, ref int createdByUserID)
+        public static bool GetApplicationInfoByApplicationID(int applicationID, ref int applicantPersonID, ref DateTime applicationDate, ref int applicationTypeID, 
+            ref byte applicationStatus, ref DateTime lastStatusDate, ref decimal paidFees, ref int createdByUserID)
         {
             bool isFound = false;
 
@@ -97,9 +97,9 @@ namespace DVLD_DataAccess
             return applicationID;
         }
 
-        public static bool UpdateApplication(int ApplicationID, int ApplicantPersonID, DateTime ApplicationDate, int ApplicationTypeID,
-             byte ApplicationStatus, DateTime LastStatusDate,
-             float PaidFees, int CreatedByUserID)
+        public static bool UpdateApplication(int applicationID, int applicantPersonID, DateTime applicationDate, int applicationTypeID,
+             byte applicationStatus, DateTime lastStatusDate,
+             decimal paidFees, int createdByUserID)
         {
 
             int rowsAffected = 0;
@@ -112,28 +112,28 @@ namespace DVLD_DataAccess
                                 ApplicationStatus = @ApplicationStatus, 
                                 LastStatusDate = @LastStatusDate,
                                 PaidFees = @PaidFees,
-                                CreatedByUserID=@CreatedByUserID
-                            where ApplicationID=@ApplicationID AND ApplicationStatus = 1";
+                                CreatedByUserID = @CreatedByUserID
+                            where ApplicationID = @ApplicationID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-            command.Parameters.AddWithValue("ApplicantPersonID", @ApplicantPersonID);
-            command.Parameters.AddWithValue("ApplicationDate", @ApplicationDate);
-            command.Parameters.AddWithValue("ApplicationTypeID", @ApplicationTypeID);
-            command.Parameters.AddWithValue("ApplicationStatus", @ApplicationStatus);
-            command.Parameters.AddWithValue("LastStatusDate", @LastStatusDate);
-            command.Parameters.AddWithValue("PaidFees", @PaidFees);
-            command.Parameters.AddWithValue("CreatedByUserID", @CreatedByUserID);
+            command.Parameters.AddWithValue("@ApplicationID", applicationID);
+            command.Parameters.AddWithValue("@ApplicantPersonID", applicantPersonID);
+            command.Parameters.AddWithValue("@ApplicationDate", applicationDate);
+            command.Parameters.AddWithValue("@ApplicationTypeID", applicationTypeID);
+            command.Parameters.AddWithValue("@ApplicationStatus", applicationStatus);
+            command.Parameters.AddWithValue("@LastStatusDate", lastStatusDate);
+            command.Parameters.AddWithValue("@PaidFees", paidFees);
+            command.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
 
-
+            
             try
             {
                 connection.Open();
                 rowsAffected = command.ExecuteNonQuery();
 
             }
-            catch (Exception ex)
+            catch
             {
                 //Console.WriteLine("Error: " + ex.Message);
                 return false;
@@ -154,7 +154,7 @@ namespace DVLD_DataAccess
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"DELETE FROM Applications
-                            WHERE ApplicationID = @ApplicationID AND ApplicationStatus = 1";
+                            WHERE ApplicationID = @ApplicationID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
