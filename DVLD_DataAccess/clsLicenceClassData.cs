@@ -3,9 +3,9 @@ using System.Data.SqlClient;
 
 namespace DVLD_DataAccess
 {
-    internal class clsLicenceClassData
+    public class clsLicenceClassData
     {
-        public static bool GetLicenceClassInfoByID(int licenseClassID, ref string className, ref string classDescription, ref byte minimumAllowedAge, ref byte defaultValidityLength,
+        public static bool GetLicenseClassInfoByID(int licenseClassID, ref string className, ref string classDescription, ref byte minimumAllowedAge, ref byte defaultValidityLength,
             ref decimal testFees)
         {
             bool isFound = false;
@@ -53,7 +53,7 @@ namespace DVLD_DataAccess
             return isFound;
         }
 
-        public static bool GetLicenceClassInfoByName(string className, ref int licenseClassID, ref string classDescription, ref byte minimumAllowedAge, ref byte defaultValidityLength,
+        public static bool GetLicenseClassInfoByName(string className, ref int licenseClassID, ref string classDescription, ref byte minimumAllowedAge, ref byte defaultValidityLength,
             ref decimal testFees)
         {
             bool isFound = false;
