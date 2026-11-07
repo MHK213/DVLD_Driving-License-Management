@@ -3,7 +3,7 @@ using DVLD_DataAccess;
 
 namespace DVLD_Business
 {
-    internal class clsLicenseClass
+    public class clsLicenseClass
     {
         public int LicenseClassID { set; get; }
         public string ClassName { set; get; }

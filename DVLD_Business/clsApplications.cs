@@ -7,7 +7,7 @@ namespace DVLD_Business
     public class clsApplications
     {
         public enum enMode { AddNew = 0, Update = 1 }
-        public enMode mode { get ; private set; } = enMode.AddNew;
+        public enMode mode { get ; protected set; } = enMode.AddNew;
 
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 }
         public enApplicationStatus ApplicationStatus { get; set; }
