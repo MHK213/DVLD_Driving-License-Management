@@ -135,6 +135,7 @@ namespace DVLD.Applications.Local_Driving_License
             if (!this.ValidateChildren())
             {
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             int LicenseClassID = clsLicenseClass.Find(cbLicenseClass.Text).LicenseClassID;
@@ -142,7 +143,7 @@ namespace DVLD.Applications.Local_Driving_License
             int ActiveApplicationID = clsApplications.GetActiveApplicationIDForLicenseClass(ApplicantPersonID, clsApplications.enApplicationType.NewDrivingLicense, LicenseClassID);
 
 
-            if (ActiveApplicationID == -1)
+            if (ActiveApplicationID != -1)
             {
                 MessageBox.Show("The applicant already has an active application for the selected class.", "Active Application", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
