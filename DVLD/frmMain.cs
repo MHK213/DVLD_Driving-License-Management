@@ -1,4 +1,5 @@
 ﻿using DVLD.Applications.Applications_Types;
+using DVLD.Applications.Local_Driving_License;
 using DVLD.GlobalClass;
 using DVLD.Login;
 using DVLD.Test.TestTypes;
@@ -123,6 +124,23 @@ namespace DVLD
             }
 
             frmTestTypesList frm = new frmTestTypesList();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form child in this.MdiChildren)
+            {
+                if (child is frmAddUpdateLocalDrivingLicesnseApplication)
+                {
+                    child.Activate();
+                    return;
+                }
+            }
+
+            frmAddUpdateLocalDrivingLicesnseApplication frm = new frmAddUpdateLocalDrivingLicesnseApplication();
             frm.MdiParent = this;
 
             frm.Show();
