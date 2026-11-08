@@ -55,7 +55,7 @@ namespace DVLD_Business
         public decimal PaidFees { get; set; }
 
         public int CreatedByUserID { get; set; }
-        public clsUser CreatedByUserInfo { get; private set; }
+        public clsUser CreatedByUserInfo { get; set; }
 
         public clsApplications()
         {
