@@ -6,7 +6,7 @@ namespace DVLD_DataAccess
     public class clsLicenceClassData
     {
         public static bool GetLicenseClassInfoByID(int licenseClassID, ref string className, ref string classDescription, ref byte minimumAllowedAge, ref byte defaultValidityLength,
-            ref decimal testFees)
+            ref decimal classFees)
         {
             bool isFound = false;
 
@@ -31,7 +31,7 @@ namespace DVLD_DataAccess
                     classDescription = (string)reader["ClassDescription"];
                     minimumAllowedAge = (byte)reader["MinimumAllowedAge"];
                     defaultValidityLength = (byte)reader["DefaultValidityLength"];
-                    testFees = (decimal)reader["TestFees"];
+                    classFees = (decimal)reader["ClassFees"];
 
                 }
                 else
@@ -54,7 +54,7 @@ namespace DVLD_DataAccess
         }
 
         public static bool GetLicenseClassInfoByName(string className, ref int licenseClassID, ref string classDescription, ref byte minimumAllowedAge, ref byte defaultValidityLength,
-            ref decimal testFees)
+            ref decimal classFees)
         {
             bool isFound = false;
 
@@ -79,7 +79,7 @@ namespace DVLD_DataAccess
                     classDescription = (string)reader["ClassDescription"];
                     minimumAllowedAge = (byte)reader["MinimumAllowedAge"];
                     defaultValidityLength = (byte)reader["DefaultValidityLength"];
-                    testFees = (decimal)reader["TestFees"];
+                    classFees = (decimal)reader["ClassFees"];
 
                 }
                 else
