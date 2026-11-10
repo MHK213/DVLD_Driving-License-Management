@@ -77,7 +77,7 @@ namespace DVLD_Business
                 return null;
         }
 
-        static public clsLocalDrivingLicenseApplication FindByAppLicenseID(int applicationID)
+        static public clsLocalDrivingLicenseApplication FindByBaseApplicationID(int applicationID)
         {
             int localDrivingLicenseApplicationID = -1, licenseClassID = -1;
 
