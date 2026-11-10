@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using DVLD.People;
 using DVLD_Business;
 
@@ -20,7 +19,7 @@ namespace DVLD.Applications.Controls
             InitializeComponent();
         }
 
-        private void _ResetDefaultValues()
+        public void _ResetDefaultValues()
         {
             _ApplicationID = -1;
             _ApplicationInfo = null;
