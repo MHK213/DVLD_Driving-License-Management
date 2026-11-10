@@ -145,5 +145,22 @@ namespace DVLD
 
             frm.Show();
         }
+
+        private void manageLocalDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form child in this.MdiChildren)
+            {
+                if (child is frmListLocalDrivingLicesnseApplications)
+                {
+                    child.Activate();
+                    return;
+                }
+            }
+
+            frmListLocalDrivingLicesnseApplications frm = new frmListLocalDrivingLicesnseApplications();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
     }
 }
