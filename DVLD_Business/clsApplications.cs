@@ -37,7 +37,7 @@ namespace DVLD_Business
 
         public int ApplicationID { get; set; }
         public int ApplicantPersonID { get; set; }
-        public string ApplicationFullName
+        public string ApplicantFullName
         {
             get
             {
