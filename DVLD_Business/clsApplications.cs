@@ -55,8 +55,6 @@ namespace DVLD_Business
         public decimal PaidFees { get; set; }
 
         public int CreatedByUserID { get; set; }
-        public clsUser CreatedByUserInfo { get; set; }
-
         public clsApplications()
         {
             ApplicationID = -1;
@@ -85,7 +83,6 @@ namespace DVLD_Business
             
            ApplicantPersonInfo = clsPerson.Find(ApplicantPersonID);
            ApplicationTypeInfo = clsApplicationType.Find(applicationTypeID);
-           CreatedByUserInfo = clsUser.FindByUserID(createdByUserID);
 
             mode = enMode.Update;
         }
