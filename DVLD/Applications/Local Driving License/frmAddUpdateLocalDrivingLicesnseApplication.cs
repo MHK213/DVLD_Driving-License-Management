@@ -1,13 +1,7 @@
 ﻿using DVLD.GlobalClass;
 using DVLD_Business;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DVLD.Applications.Local_Driving_License
@@ -72,6 +66,7 @@ namespace DVLD.Applications.Local_Driving_License
             {
                 lblTitle.Text = "Update Local Driving License Application";
 
+                ctrlPersonCardWithFilter1.ShowFilter = false;
                 tpApplicationInfo.Enabled = true;
                 btnSave.Enabled = true;
             }
@@ -95,7 +90,7 @@ namespace DVLD.Applications.Local_Driving_License
             lblApplicationDate.Text = LocalDrivingLicenseApplicationInfo.ApplicationDate.ToShortDateString();
             cbLicenseClass.SelectedIndex = cbLicenseClass.FindString(clsLicenseClass.Find(LocalDrivingLicenseApplicationInfo.LicenseClassID).ClassName);
             lblFees.Text = LocalDrivingLicenseApplicationInfo.PaidFees.ToString();
-            lblCreatedByUser.Text = LocalDrivingLicenseApplicationInfo.CreatedByUserInfo.UserName;
+            lblCreatedByUser.Text = clsUser.FindByUserID(LocalDrivingLicenseApplicationInfo.CreatedByUserID).UserName;
         }
 
         private void DataBackEvent(object sender, int PersonID)
@@ -152,7 +147,6 @@ namespace DVLD.Applications.Local_Driving_License
 
                 LocalDrivingLicenseApplicationInfo.LicenseClassID = LicenseClassID;
                 LocalDrivingLicenseApplicationInfo.CreatedByUserID = clsGlobal.CurrentUser.UserID;
-                LocalDrivingLicenseApplicationInfo.CreatedByUserInfo = clsGlobal.CurrentUser;
                 LocalDrivingLicenseApplicationInfo.PaidFees = Convert.ToDecimal(lblFees.Text);
                 LocalDrivingLicenseApplicationInfo.LastStatusDate = DateTime.Now;
                 LocalDrivingLicenseApplicationInfo.ApplicationTypeID = (int)clsApplications.enApplicationType.NewDrivingLicense;
