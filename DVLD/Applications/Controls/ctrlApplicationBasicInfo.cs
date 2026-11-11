@@ -47,7 +47,7 @@ namespace DVLD.Applications.Controls
             lblApplicant.Text = _ApplicationInfo.ApplicantFullName;
             lblDate.Text = _ApplicationInfo.ApplicationDate.ToString("dd/MM/yyyy");
             lblStatusDate.Text = _ApplicationInfo.LastStatusDate.ToString("dd/MM/yyyy");
-            lblCreatedByUser.Text = _ApplicationInfo.CreatedByUserInfo.UserName;
+            lblCreatedByUser.Text = clsUser.FindByUserID(_ApplicationInfo.CreatedByUserID).UserName;
             
             llViewPersonInfo.Enabled = true;
         }
