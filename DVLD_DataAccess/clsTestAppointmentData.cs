@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace DVLD_DataAccess
 {
-    internal class clsTestAppointmentData
+    public class clsTestAppointmentData
     {
         public static bool GetTestAppointmentInfoByID(int testAppointmentID, ref int testTypeID, ref int localDrivingLicenseApplicationID, ref DateTime appointmentDate,
             ref decimal paidFees, ref int createdByUserID, ref byte isLocked, ref int retakeTestApplicationID)
@@ -267,45 +267,40 @@ namespace DVLD_DataAccess
             return dt;
         }
 
-        public static int GetActiveTestAppointmentID(int localDrivingLicenseApplicationID, int testTypeID)
+        public static DataTable GetApplicationTestAppointmentsPerTestType(int localDrivingLicenseApplicationID, int testTypeID)
         {
-            int activeTestAppointmentID = -1;
+            DataTable dt = new DataTable();
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"SELECT TestAppointmentID AS ActiveTestAppointmentID 
+            string query = @"SELECT TestAppointmentID, AppointmentDate, PaidFees, IsLocked 
                              FROM TestAppointments
-                             WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID AND TestTypeID = @TestTypeID AND IsLocked = 0";
+                             WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID AND TestTypeID = @TestTypeID
+                             ORDER BY TestAppointmentID DESC";
 
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", localDrivingLicenseApplicationID);
             command.Parameters.AddWithValue("@TestTypeID", testTypeID);
+
             try
             {
                 connection.Open();
-                object result = command.ExecuteScalar();
+                
+                SqlDataReader reader = command.ExecuteReader();
 
-                if (result != null && int.TryParse(result.ToString(), out int testAppointmentID))
-                {
-                    activeTestAppointmentID = testAppointmentID;
-                }
+                if(reader.HasRows)
+                    dt.Load(reader);
+
+                reader.Close();
             }
-            catch
-            {
-                return activeTestAppointmentID;
-            }
+            catch {}
             finally
             {
                 connection.Close();
             }
 
-            return activeTestAppointmentID;
-        }
-
-        public static bool DoesApplicantHaveActiveTest(int localDrivingLicenseApplicationID, int testTypeID)
-        {
-            return GetActiveTestAppointmentID(localDrivingLicenseApplicationID, testTypeID) != -1;
+            return dt;
         }
     }
 }
