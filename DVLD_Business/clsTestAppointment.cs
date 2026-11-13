@@ -15,7 +15,7 @@ namespace DVLD_Business
         public DateTime AppointmentDate { get; private set; }
         public decimal PaidFees { get; private set; }
         public int CreatedByUserID { get; private set; }
-        public byte IsLocked { get; private set; }
+        public bool IsLocked { get; private set; }
 
         public int RetakeTestApplicationID { get; private set; }
         public clsApplications RetakeTestApplicationInfo { get; private set; }
@@ -28,14 +28,14 @@ namespace DVLD_Business
             AppointmentDate = DateTime.Now;
             PaidFees = 0.0m;
             CreatedByUserID = -1;
-            IsLocked = 0;
+            IsLocked = false;
             RetakeTestApplicationID = -1;
 
             Mode = enMode.AddNew;
         }
 
-        public clsTestAppointment(int testAppointmentID, clsTestType.enTestType testTypeID, int localDrivingLicenseApplicationID, DateTime appointmentDate,decimal paidFees, int createdByUserID, byte isLocked, 
-            int retakeTestApplicationID)
+        public clsTestAppointment(int testAppointmentID, clsTestType.enTestType testTypeID, int localDrivingLicenseApplicationID, DateTime appointmentDate,decimal paidFees, int createdByUserID,
+            bool isLocked, int retakeTestApplicationID)
         {
             TestAppointmentID = testAppointmentID;
             TestTypeID = testTypeID;
@@ -69,9 +69,9 @@ namespace DVLD_Business
             int localDrivingLicenseApplicationID = -1, createdByUserID = -1, retakeTestApplicationID = -1, testTypeID = -1;
             DateTime appointmentDate = DateTime.Now;
             decimal paidFees = 0.0m;
-            byte isLocked = 0;
+            bool isLocked = false;
 
-            bool isFound = clsTestAppointmentData.GetTestAppointmentInfoByID(testAppointmentID, ref localDrivingLicenseApplicationID, ref testTypeID, 
+            bool isFound = clsTestAppointmentData.GetTestAppointmentInfoByID(testAppointmentID, ref testTypeID, ref localDrivingLicenseApplicationID, 
                 ref appointmentDate, ref paidFees, ref createdByUserID, ref isLocked, ref retakeTestApplicationID);
 
             if (isFound)
@@ -85,7 +85,7 @@ namespace DVLD_Business
             int testAppointmentID = -1, createdByUserID = -1, retakeTestApplicationID = -1;
             DateTime appointmentDate = DateTime.Now;
             decimal paidFees = 0.0m;
-            byte isLocked = 0;
+            bool isLocked = false;
 
             bool isFound = clsTestAppointmentData.GetLastTestAppointment(localDrivingLicenseApplicationID, testTypeID, ref testAppointmentID,
                 ref appointmentDate, ref paidFees, ref createdByUserID, ref isLocked, ref retakeTestApplicationID);
@@ -98,7 +98,7 @@ namespace DVLD_Business
 
         static public DataTable GetAllTestAppointmentsList()
         {
-            return clsTestAppointment.GetAllTestAppointmentsList();
+            return clsTestAppointmentData.GetAllTestAppointmentsList();
         }
 
         public bool Save()
