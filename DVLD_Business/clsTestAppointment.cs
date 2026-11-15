@@ -10,14 +10,14 @@ namespace DVLD_Business
         public enMode Mode { get; private set; }
 
         public int TestAppointmentID { get; private set; }
-        public clsTestType.enTestType TestTypeID { get; private set; }
-        public int LocalDrivingLicenseApplicationID { get; private set; }
-        public DateTime AppointmentDate { get; private set; }
-        public decimal PaidFees { get; private set; }
-        public int CreatedByUserID { get; private set; }
+        public clsTestType.enTestType TestTypeID { get; set; }
+        public int LocalDrivingLicenseApplicationID { get; set; }
+        public DateTime AppointmentDate { get; set; }
+        public decimal PaidFees { get; set; }
+        public int CreatedByUserID { get; set; }
         public bool IsLocked { get; private set; }
 
-        public int RetakeTestApplicationID { get; private set; }
+        public int RetakeTestApplicationID { get; set; }
         public clsApplications RetakeTestApplicationInfo { get; private set; }
 
         public clsTestAppointment()
