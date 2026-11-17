@@ -55,6 +55,7 @@ namespace DVLD_Business
         public decimal PaidFees { get; set; }
 
         public int CreatedByUserID { get; set; }
+        public clsUser CreatedByUserInfo { get; private set; }
         public clsApplications()
         {
             ApplicationID = -1;
@@ -69,7 +70,7 @@ namespace DVLD_Business
             mode = enMode.AddNew;
         }
 
-        public clsApplications(int applicationID, int applicantPersonID, DateTime applicationDate, int applicationTypeID, enApplicationStatus applicationStatus, 
+        private clsApplications(int applicationID, int applicantPersonID, DateTime applicationDate, int applicationTypeID, enApplicationStatus applicationStatus, 
             DateTime lastStatusDate, decimal paidFees, int createdByUserID)
         {
            ApplicationID = applicationID;
@@ -83,6 +84,7 @@ namespace DVLD_Business
             
            ApplicantPersonInfo = clsPerson.Find(ApplicantPersonID);
            ApplicationTypeInfo = clsApplicationType.Find(applicationTypeID);
+           CreatedByUserInfo = clsUser.FindByUserID(CreatedByUserID);
 
             mode = enMode.Update;
         }
