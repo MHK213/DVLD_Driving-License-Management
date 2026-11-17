@@ -141,6 +141,12 @@
     <Compile Include="Test\Controls\ctrlScheduleTest.Designer.cs">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test\frmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\frmScheduleTest.Designer.cs">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test\TestTypes\frmEditTestType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </Compile>
     <EmbeddedResource Include="Test\Controls\ctrlScheduleTest.resx">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\frmScheduleTest.resx">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test\TestTypes\frmEditTestType.resx">
       <DependentUpon>frmEditTestType.cs</DependentUpon>

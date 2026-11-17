@@ -20,41 +20,40 @@ namespace DVLD.Test.Controls
         private void InitializeComponent()
         {
             this.gbTestType = new System.Windows.Forms.GroupBox();
+            this.pbTestTypeImage = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblUserMessage = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblLocalDrivingLicenseAppID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblDrivingClass = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblFullName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTrial = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.dtpTestDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblFees = new System.Windows.Forms.Label();
             this.gbRetakeTestInfo = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblRetakeTestAppID = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lblRetakeAppFees = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblTotalFees = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pbTestTypeImage = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.lblTotalFees = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbTestType.SuspendLayout();
-            this.gbRetakeTestInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestTypeImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -62,6 +61,7 @@ namespace DVLD.Test.Controls
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.gbRetakeTestInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -103,6 +103,18 @@ namespace DVLD.Test.Controls
             this.gbTestType.TabStop = false;
             this.gbTestType.Text = "Test Appointment";
             // 
+            // pbTestTypeImage
+            // 
+            this.pbTestTypeImage.BackColor = System.Drawing.Color.White;
+            this.pbTestTypeImage.Image = global::DVLD.Properties.Resources.driving_test_512;
+            this.pbTestTypeImage.InitialImage = null;
+            this.pbTestTypeImage.Location = new System.Drawing.Point(190, 27);
+            this.pbTestTypeImage.Name = "pbTestTypeImage";
+            this.pbTestTypeImage.Size = new System.Drawing.Size(140, 115);
+            this.pbTestTypeImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTestTypeImage.TabIndex = 152;
+            this.pbTestTypeImage.TabStop = false;
+            // 
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
@@ -138,6 +150,16 @@ namespace DVLD.Test.Controls
             this.label8.TabIndex = 167;
             this.label8.Text = "D.L.App.ID:";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DVLD.Properties.Resources.Number_32;
+            this.pictureBox4.Location = new System.Drawing.Point(145, 265);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 169;
+            this.pictureBox4.TabStop = false;
+            // 
             // lblLocalDrivingLicenseAppID
             // 
             this.lblLocalDrivingLicenseAppID.AutoSize = true;
@@ -159,6 +181,16 @@ namespace DVLD.Test.Controls
             this.label10.Size = new System.Drawing.Size(83, 25);
             this.label10.TabIndex = 170;
             this.label10.Text = "D. Class:";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::DVLD.Properties.Resources.License_Type_32;
+            this.pictureBox7.Location = new System.Drawing.Point(145, 306);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 187;
+            this.pictureBox7.TabStop = false;
             // 
             // lblDrivingClass
             // 
@@ -182,6 +214,16 @@ namespace DVLD.Test.Controls
             this.label6.TabIndex = 163;
             this.label6.Text = "Name:";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DVLD.Properties.Resources.Person_32;
+            this.pictureBox2.Location = new System.Drawing.Point(145, 347);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 164;
+            this.pictureBox2.TabStop = false;
+            // 
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
@@ -203,6 +245,16 @@ namespace DVLD.Test.Controls
             this.label5.Size = new System.Drawing.Size(55, 25);
             this.label5.TabIndex = 160;
             this.label5.Text = "Trial:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.Count_32;
+            this.pictureBox1.Location = new System.Drawing.Point(145, 388);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 161;
+            this.pictureBox1.TabStop = false;
             // 
             // lblTrial
             // 
@@ -226,6 +278,16 @@ namespace DVLD.Test.Controls
             this.label1.TabIndex = 153;
             this.label1.Text = "Date:";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::DVLD.Properties.Resources.Calendar_32;
+            this.pictureBox8.Location = new System.Drawing.Point(145, 429);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 154;
+            this.pictureBox8.TabStop = false;
+            // 
             // dtpTestDate
             // 
             this.dtpTestDate.CustomFormat = "dd/MM/yyyy";
@@ -247,6 +309,16 @@ namespace DVLD.Test.Controls
             this.label2.Size = new System.Drawing.Size(55, 25);
             this.label2.TabIndex = 157;
             this.label2.Text = "Fees:";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DVLD.Properties.Resources.money_32;
+            this.pictureBox3.Location = new System.Drawing.Point(145, 470);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 158;
+            this.pictureBox3.TabStop = false;
             // 
             // lblFees
             // 
@@ -291,6 +363,16 @@ namespace DVLD.Test.Controls
             this.label4.TabIndex = 198;
             this.label4.Text = "R.Test.App.ID:";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DVLD.Properties.Resources.Number_32;
+            this.pictureBox5.Location = new System.Drawing.Point(125, 34);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 200;
+            this.pictureBox5.TabStop = false;
+            // 
             // lblRetakeTestAppID
             // 
             this.lblRetakeTestAppID.AutoSize = true;
@@ -312,6 +394,16 @@ namespace DVLD.Test.Controls
             this.label7.Size = new System.Drawing.Size(158, 25);
             this.label7.TabIndex = 201;
             this.label7.Text = "Retake App Fees:";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DVLD.Properties.Resources.money_32;
+            this.pictureBox6.Location = new System.Drawing.Point(125, 72);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 202;
+            this.pictureBox6.TabStop = false;
             // 
             // lblRetakeAppFees
             // 
@@ -335,6 +427,16 @@ namespace DVLD.Test.Controls
             this.label9.TabIndex = 204;
             this.label9.Text = "Total Fees:";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::DVLD.Properties.Resources.money_32;
+            this.pictureBox9.Location = new System.Drawing.Point(365, 34);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 205;
+            this.pictureBox9.TabStop = false;
+            // 
             // lblTotalFees
             // 
             this.lblTotalFees.AutoSize = true;
@@ -345,108 +447,6 @@ namespace DVLD.Test.Controls
             this.lblTotalFees.Size = new System.Drawing.Size(68, 30);
             this.lblTotalFees.TabIndex = 206;
             this.lblTotalFees.Text = "[$$$]";
-            // 
-            // pbTestTypeImage
-            // 
-            this.pbTestTypeImage.BackColor = System.Drawing.Color.White;
-            this.pbTestTypeImage.Image = global::DVLD.Properties.Resources.driving_test_512;
-            this.pbTestTypeImage.InitialImage = null;
-            this.pbTestTypeImage.Location = new System.Drawing.Point(190, 27);
-            this.pbTestTypeImage.Name = "pbTestTypeImage";
-            this.pbTestTypeImage.Size = new System.Drawing.Size(140, 115);
-            this.pbTestTypeImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbTestTypeImage.TabIndex = 152;
-            this.pbTestTypeImage.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DVLD.Properties.Resources.Number_32;
-            this.pictureBox4.Location = new System.Drawing.Point(145, 265);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 169;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::DVLD.Properties.Resources.License_Type_32;
-            this.pictureBox7.Location = new System.Drawing.Point(145, 306);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 187;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DVLD.Properties.Resources.Person_32;
-            this.pictureBox2.Location = new System.Drawing.Point(145, 347);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 164;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.Count_32;
-            this.pictureBox1.Location = new System.Drawing.Point(145, 388);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 161;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::DVLD.Properties.Resources.Calendar_32;
-            this.pictureBox8.Location = new System.Drawing.Point(145, 429);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 154;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DVLD.Properties.Resources.money_32;
-            this.pictureBox3.Location = new System.Drawing.Point(145, 470);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 158;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DVLD.Properties.Resources.Number_32;
-            this.pictureBox5.Location = new System.Drawing.Point(125, 34);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 200;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::DVLD.Properties.Resources.money_32;
-            this.pictureBox6.Location = new System.Drawing.Point(125, 72);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 202;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::DVLD.Properties.Resources.money_32;
-            this.pictureBox9.Location = new System.Drawing.Point(365, 34);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 205;
-            this.pictureBox9.TabStop = false;
             // 
             // btnSave
             // 
@@ -480,8 +480,6 @@ namespace DVLD.Test.Controls
             this.Size = new System.Drawing.Size(533, 722);
             this.gbTestType.ResumeLayout(false);
             this.gbTestType.PerformLayout();
-            this.gbRetakeTestInfo.ResumeLayout(false);
-            this.gbRetakeTestInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestTypeImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -489,6 +487,8 @@ namespace DVLD.Test.Controls
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.gbRetakeTestInfo.ResumeLayout(false);
+            this.gbRetakeTestInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
