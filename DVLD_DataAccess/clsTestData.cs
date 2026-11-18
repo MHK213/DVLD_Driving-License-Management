@@ -117,7 +117,8 @@ namespace DVLD_DataAccess
 
             string query = @"INSERT INTO Tests (TestAppointmentID, TestResult, Notes, CreatedByUserID)
                                 VALUES (@TestAppointmentID, @TestResult, @Notes, @CreatedByUserID)
-                                SELECT SCOPE_IDENTITY()";
+                             Update TestAppointments Set IsLocked = 1 Where TestAppointmentID = @TestAppointmentID
+                             SELECT SCOPE_IDENTITY()";
 
             SqlCommand command = new SqlCommand(query, connection);
 
