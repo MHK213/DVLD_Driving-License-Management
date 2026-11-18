@@ -12,13 +12,13 @@ namespace DVLD_Business
 
         public int TestID { get; private set;}
 
-        public int TestAppointmentID { get; private set; }
+        public int TestAppointmentID { get; set; }
         public clsTestAppointment TestAppointmentInfo { get; private set; }
 
-        public bool TestResult { get; private set; }
-        public string Notes { get; private set; }
+        public bool TestResult { get; set; }
+        public string Notes { get; set; }
 
-        public int CreatedByUserID { get; private set; }
+        public int CreatedByUserID { get; set; }
         public clsUser CreatedByUserInfo { get; private set; }
 
         public clsTest()
