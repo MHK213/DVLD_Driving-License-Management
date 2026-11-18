@@ -23,8 +23,6 @@ namespace DVLD_Business
             LocalDrivingLicenseApplicationID = -1;
             LicenseClassID = -1;
 
-            LicenseClassInfo = null;
-
             mode = enMode.AddNew;
         }
 
@@ -196,6 +194,29 @@ namespace DVLD_Business
             return clsLocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTest(localdrivinglicenseapplicationid, (int)testType);
         }
     
-        
+        public clsTest GetLastTestPerTestType(clsTestType.enTestType testTypeID)
+        {
+            return clsTest.GetLastTestByPersonAndTestTypeAndLicenseClass(ApplicantPersonID, (int)testTypeID, LicenseClassID);
+        }
+
+        public byte GetPassedTestCount()
+        {
+            return clsTest.GetPassedTestCount(LocalDrivingLicenseApplicationID);
+        }
+
+        static public byte GetPassedTestCount(int localDrivingLicenseApplicationID)
+        {
+            return clsTest.GetPassedTestCount(localDrivingLicenseApplicationID);
+        }
+
+        public bool PassedAllTests()
+        {
+            return clsTest.PassedAllTests(LocalDrivingLicenseApplicationID);
+        }
+
+        static public bool PassedAllTests(int localDrivingLicenseApplicationID)
+        {
+            return clsTest.PassedAllTests(localDrivingLicenseApplicationID);
+        }
     }
 }
