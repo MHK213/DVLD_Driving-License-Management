@@ -40,15 +40,15 @@ namespace DVLD_Business
 
         private bool _AddNew()
         {
-            DriverID = clsDriverData.AddNewDriver(PersonID, CreatedByUserID, CreatedDate);
+            DriverID = clsDriverData.AddNewDriver(PersonID, CreatedByUserID);
 
             return (DriverID != -1);
         }
 
-        private bool _Update()
-        {
-            return clsDriverData.UpdateDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
-        }
+        //private bool _Update()
+        //{
+        //    return clsDriverData.UpdateDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
+        //}
 
         public static clsDriver FindByDriverID(int driverID)
         {
@@ -100,8 +100,8 @@ namespace DVLD_Business
                     {
                         return false;
                     }
-                case enMode.Update:
-                    return _Update();
+                //case enMode.Update:
+                //    return _Update();
                 default:
                     return false;
             }

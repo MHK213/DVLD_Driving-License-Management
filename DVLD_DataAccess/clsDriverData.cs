@@ -88,7 +88,7 @@ namespace DVLD_DataAccess
             return isFound;
         }
 
-        public static int AddNewDriver(int personID, int createdByUserID, DateTime createdDate)
+        public static int AddNewDriver(int personID, int createdByUserID)
         {
             int driverID = -1;
 
@@ -102,7 +102,7 @@ namespace DVLD_DataAccess
 
             command.Parameters.AddWithValue("@PersonID", personID);
             command.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
-            command.Parameters.AddWithValue("@CreatedDate", createdDate);
+            command.Parameters.AddWithValue("@CreatedDate", DateTime.Now);
 
             try
             {
@@ -121,36 +121,36 @@ namespace DVLD_DataAccess
             return driverID;
         }
 
-        public static bool UpdateDriver(int driverID, int personID, int createdByUserID, DateTime createdDate)
-        {
-            int rowsAffected = 0;
+        //public static bool UpdateDriver(int driverID, int personID, int createdByUserID, DateTime createdDate)
+        //{
+        //    int rowsAffected = 0;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+        //    SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"UPDATE Drivers SET PersonID = @PersonID, CreatedByUserID = @CreatedByUserID, CreatedDate = @CreatedDate
-                            WHERE DriverID = @DriverID";
+        //    string query = @"UPDATE Drivers SET PersonID = @PersonID, CreatedByUserID = @CreatedByUserID, CreatedDate = @CreatedDate
+        //                    WHERE DriverID = @DriverID";
 
-            SqlCommand command = new SqlCommand(query, connection);
+        //    SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@DriverID", driverID);
-            command.Parameters.AddWithValue("@PersonID", personID);
-            command.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
-            command.Parameters.AddWithValue("@CreatedDate", createdDate);
+        //    command.Parameters.AddWithValue("@DriverID", driverID);
+        //    command.Parameters.AddWithValue("@PersonID", personID);
+        //    command.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
+        //    command.Parameters.AddWithValue("@CreatedDate", createdDate);
 
-            try
-            {
-                connection.Open();
+        //    try
+        //    {
+        //        connection.Open();
 
-                rowsAffected = command.ExecuteNonQuery();
-            }
-            catch { }
-            finally
-            {
-                connection.Close();
-            }
+        //        rowsAffected = command.ExecuteNonQuery();
+        //    }
+        //    catch { }
+        //    finally
+        //    {
+        //        connection.Close();
+        //    }
 
-            return (rowsAffected > 0);
-        }
+        //    return (rowsAffected > 0);
+        //}
 
         public static DataTable GetAllDriversList()
         {
