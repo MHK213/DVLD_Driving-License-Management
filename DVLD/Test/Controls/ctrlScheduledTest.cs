@@ -58,8 +58,19 @@ namespace DVLD.Test.Controls
             InitializeComponent();
         }
 
+        private void _Reset()
+        {
+            _TestAppointmentID = -1;
+            _TestID = -1;
+            _LocalDrivingLicenseApplicationID = -1;
+
+            _TestAppointmentInfo = null;
+            _LocalDrivingLicenseApplicationInfo = null;
+        }
+
         public void LoadInfo(int testAppointmentID)
         {
+            _Reset();
 
             _TestAppointmentInfo = clsTestAppointment.FindByTestAppointmentID(testAppointmentID);
 
@@ -73,7 +84,7 @@ namespace DVLD.Test.Controls
 
             _TestAppointmentID = testAppointmentID;
 
-            //_TestID = _TestAppointmentInfo.TestID;
+            _TestID = _TestAppointmentInfo.TestID;
 
             _LocalDrivingLicenseApplicationID = _TestAppointmentInfo.LocalDrivingLicenseApplicationID;
             _LocalDrivingLicenseApplicationInfo = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
@@ -97,7 +108,7 @@ namespace DVLD.Test.Controls
             lblDate.Text = _TestAppointmentInfo.AppointmentDate.ToString("d");
             lblFees.Text = _TestAppointmentInfo.PaidFees.ToString();
 
-            //lblTestID.Text = (_TestID == -1) ? "Not Taken Yet" : _TestAppointmentInfo.Te
+            lblTestID.Text = (_TestID == -1) ? "Not Taken Yet" : _TestID.ToString();
         }
     }
 }
