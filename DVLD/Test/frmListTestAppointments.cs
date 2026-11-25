@@ -89,9 +89,30 @@ namespace DVLD.Test
                 return;
             }
 
-            frmScheduleTest frmScheduleTest = new frmScheduleTest(_LocalDrivingLicanseApplicationID, _TestTypeID); 
+            clsTest lastTest = localDrivingLicenseApplication.GetLastTestPerTestType(_TestTypeID);
+
+            frmScheduleTest frmScheduleTest;
+
+            if (lastTest == null)
+            {
+                frmScheduleTest = new frmScheduleTest(_LocalDrivingLicanseApplicationID, _TestTypeID);
+
+                frmScheduleTest.ShowDialog();
+
+                frmListTestAppointments_Load(null, null);
+                return;
+            }
+
+            if (lastTest.TestResult)
+            {
+                MessageBox.Show("Person already passed this test, you can only retake faild test", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            frmScheduleTest = new frmScheduleTest(_LocalDrivingLicanseApplicationID, _TestTypeID); 
 
             frmScheduleTest.ShowDialog();
+            frmListTestAppointments_Load(null, null);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -104,12 +125,17 @@ namespace DVLD.Test
             frmScheduleTest frmScheduleTest = new frmScheduleTest(_LocalDrivingLicanseApplicationID, _TestTypeID, Convert.ToInt32(dgvLicenseTestAppointments.CurrentRow.Cells[0].Value));
 
             frmScheduleTest.ShowDialog();
-            _FillTestAppointmentsList();
+            
+            frmListTestAppointments_Load(null, null);
         }
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmTakeTest frmTakeTest = new frmTakeTest(Convert.ToInt32(dgvLicenseTestAppointments.CurrentRow.Cells[0].Value), _TestTypeID);
 
+            frmTakeTest.ShowDialog();
+
+            frmListTestAppointments_Load(null, null);
         }
     }
 }
