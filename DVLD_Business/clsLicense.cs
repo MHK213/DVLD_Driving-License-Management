@@ -10,7 +10,7 @@ namespace DVLD_Business
         public enMode Mode { get; private set; } = enMode.AddNew;
 
         public enum enIssueReason { FirstTime = 1, Renew = 2, ReplacementForDamaged = 3, ReplacementForLost = 4 }
-        public enIssueReason IssueReason { get; private set; } = enIssueReason.FirstTime;
+        public enIssueReason IssueReason { get; set; } = enIssueReason.FirstTime;
         public string IssueReasonText {
             get
             {
@@ -19,20 +19,20 @@ namespace DVLD_Business
         }
 
         public int LicenseID { get; private set; }
-        public int ApplicationID { get; private set; }
+        public int ApplicationID { get; set; }
 
-        public int DriverID { get; private set; }
+        public int DriverID { get; set; }
         public clsDriver DriverInfo { get; private set; }
 
-        public int LicenseClassID { get; private set; }
+        public int LicenseClassID { get; set; }
         public clsLicenseClass LicenseClass { get; private set; }
 
-        public DateTime IssueDate { get; private set; }
-        public DateTime ExpirationDate { get; private set; }
-        public string Notes { get; private set; }
-        public decimal PaidFees { get; private set; }
-        public bool IsActive { get; private set; }
-        public int CreatedByUserID { get; private set; }
+        public DateTime IssueDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public string Notes { get; set; }
+        public decimal PaidFees { get; set; }
+        public bool IsActive { get; set; }
+        public int CreatedByUserID { get; set; }
 
         public clsLicense()
         {

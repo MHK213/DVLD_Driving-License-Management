@@ -10,11 +10,11 @@ namespace DVLD_Business
         public enMode Mode { get; private set; } = enMode.AddNew;
 
         public int DriverID { get; private set; }
-        public int PersonID { get; private set; }
+        public int PersonID { get; set; }
         public clsPerson PersonInfo { get; private set; }
 
-        public int CreatedByUserID { get; private set; }
-        public DateTime CreatedDate { get; private set; }
+        public int CreatedByUserID { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         public clsDriver()
         {
